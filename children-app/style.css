@@ -1,21 +1,54 @@
 *{box-sizing: border-box;}
 html{ scroll-behavior: smooth;}
+:root{
+    --primarycolor: rgb(10, 144, 154);
+    --primarydark: rgb(0, 88, 98);
+    --primarylight: rgb(4, 206, 206);
+}
 
 .header{
+    text-decoration: none;
+    background-color: var(--primarydark);
+    position: relative;
     text-align: center;
+    top: 0%;
     font-size: 5em;
     font-family: 'Times New Roman', Times, serif;
-    background-color: rgb(0, 0, 142);
     color: white;
     padding: 10px;
-    position: relative;
     
 
 }
-.logo{
+.logoo{
     height: 60px;
     width: 60px;
 }
+.second-header{
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    
+
+}
+ /*---back icon--*/
+ .back-icon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+    transition: 300ms;
+    justify-content: left;
+  }
+  .back-icon:hover {
+    text-decoration: none;
+    background-color: rgb(238, 238, 8);
+    padding: 0.2em;
+    border-radius: 50%;
+    float: left;
+    transform: scale(0.9);
+  }
 .container{
     display: grid;
     grid-template-columns: 48% 48%;
@@ -27,7 +60,7 @@ html{ scroll-behavior: smooth;}
     width: 100%;
     display: block;
     height: 80%;
-    border: solid 2px rgb(1, 1, 194) ;
+    border: solid 2px var(--primarycolor) ;
     border-radius: 20px;
    
 }
@@ -40,7 +73,7 @@ div p{
 .img:hover{
     width: 100%;
     display: block;
-    border: solid 2px rgb(1, 1, 194) ;
+    border: solid 2px var(--primarycolor) ;
     border-radius: 20px;
     -webkit-box-shadow: 7px -2px 8px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 7px -2px 8px 0px rgba(0,0,0,0.75);
@@ -81,12 +114,13 @@ div h2{
     font-size: 1.3em;
     font-weight: 900;
     color: white;
-    background-color: brown;
+    background-color: var(--primarylight);
     padding:20px;
     width: fit-content;
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
+    border-radius: 20px;
 }
 .fruit-img:hover{
     width: 100%;
@@ -98,7 +132,65 @@ div h2{
     box-shadow: 7px -2px 8px 0px rgba(0,0,0,0.75);/*---Shadow taken from shadow generator website--*/
    
 }
+/*---footer--*/
+.footer{
+    background-color: var(--primarydark);
+    width: 100%;
+    height: 300px;
+ 
+    
+    
+}
+.footer-logo{
+    width: 50px ;
+    height: 50px;
+    float: left;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+.ft{
+    display: grid;
+    grid-template-columns: repeat(3,33%);
+    
+}
+/*---modal--*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+ 
 /*----Responsiveness---*/
 @media screen and (max-width:1200px) {
     .container-fruit{
@@ -128,3 +220,89 @@ div h2{
     }
     
 }
+/*--responsive first page--*/
+@media screen and (max-width:1200px){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+    
+    }
+}
+@media screen and (max-width:900px){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+    
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: 50%;
+    }
+    .ftt{
+        width: 100%;
+    }
+}
+@media screen and (max-width:600px){
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+    
+    }
+    .footer-content{
+        display: grid;
+        grid-template-columns: 50%;
+    }
+    .ftt{
+        width: 100%;
+    }
+}
+/*-----Footer----*/
+.ftt{
+    width: 100%;
+    background-color: var(--primarydark);
+    position: absolute;
+}
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    float: left;
+  }
+  
+  .logo1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
+    background-color: white;
+    padding: 10px;
+    position: relative;
+  }
+  .footer-content {
+    bottom: 10%;
+    float: left;
+    width: 31%;
+    margin: 1%;
+  }
+  
+  .heading {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 2em;
+    font-weight: 700;
+  }
+  .f12 {
+    color: white;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+  }
+  .fa {
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+  }
