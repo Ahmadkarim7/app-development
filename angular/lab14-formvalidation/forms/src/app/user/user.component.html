@@ -1,0 +1,29 @@
+<section class="container">
+    <div class="form">
+        <h1 class="formtitle">Signup Form</h1>
+
+        <!--collect username-->
+        <div class="form_control">
+            <label for="username">Username: </label>
+            <input type="text" id="username" placeholder="Type username..." [(ngModel)]="newuser.name" name="userName" #name = 'ngModel'
+            (change)="displayLog(name)" >
+        </div>
+
+        <!--collect email-->
+        <div class="form_control">
+            <label for="email">Email address:</label>
+            <input type="email" id="email" placeholder="Type email address..." [(ngModel)]="newuser.email">
+        </div>
+
+        <!-- submit button -->
+         <div class="form_control">
+            <button class="btnsubmit">Submit</button>
+         </div>
+
+         <!-- JSON display -->
+         <div class="json_display">
+            <p>Result</p>
+            <p>{{jsonUser}}</p>
+         </div>
+        </div>
+</section>
