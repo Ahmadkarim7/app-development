@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 body{
   font-family: monospace;
 }
-=======
-body {
-  font-family: monospace;
-}
->>>>>>> e964d0f4ebad5ec53f58faf00e51efcc147e6be3
